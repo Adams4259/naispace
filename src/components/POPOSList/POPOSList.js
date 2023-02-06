@@ -1,9 +1,10 @@
 import React from "react";
 import POPOSSpace from "../../POPOSSpace/POPOSSpace";
+import './POPOSLIst.css'
 
-function NaPOPOSList() {
+function POPOSList() {
     return (
-        <div>
+        <div className="POPOSList">
             <POPOSSpace
                 name="50 Olesereni Street"
                 address="50 Oleserni St."
@@ -38,4 +39,4 @@ function NaPOPOSList() {
     )
 }
 
-export default NaPOPOSList;
+export default POPOSList;
