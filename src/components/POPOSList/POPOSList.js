@@ -1,40 +1,24 @@
 import React from "react";
-import POPOSSpace from "../../POPOSSpace/POPOSSpace";
+import POPOSSpace from "../POPOSSpace/POPOSSpace";
 import './POPOSLIst.css'
+import data from '../POPOSList/my-data.json';
 
+const spaces = data.map((obj) =>{
+  const {title, image , address, hours} = obj
+  return (
+    <POPOSSpace
+      key = {title}
+      name={obj.title}
+      address={obj.address}
+      image={obj.images[0]}
+      hours ={obj.hours}
+    />
+  )
+})
 function POPOSList() {
     return (
         <div className="POPOSList">
-            <POPOSSpace
-                name="50 Olesereni Street"
-                address="50 Oleserni St."
-                image="50-Olesereni-st.jpg"
-            />
-            <POPOSSpace
-        name="100 Pine Street"
-        address="100 Pine St."
-        image="100-pine.jpg"
-      />
-      <POPOSSpace
-        name="101 California Street"
-        address="101 California"
-        image="101-california.jpg"
-      />
-      <POPOSSpace
-        name="343 Sansome Roof Garden"
-        address="343 Sansome St."
-        image="343-sansome-roof-garden.jpg"
-      />
-      <POPOSSpace
-        name="525 Market Street Plaza"
-        address="525 Market St."
-        image="525-market-street-plaza.jpg"
-      />
-      <POPOSSpace
-        name="Citigroup Center"
-        address="1 Sansome St."
-        image="citigroup-center.jpg"
-      />
+           {spaces}
         </div>
     )
 }

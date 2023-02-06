@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Title from './components/Title/Title';
 import POPOSList from './components/POPOSList/POPOSList';
-import POPOSSpace from './POPOSSpace/POPOSSpace';
+import POPOSSpace from './components/POPOSSpace/POPOSSpace';
 import Footer from './components/Footer/Footer';
 
 function App() {
